@@ -19,7 +19,6 @@ class App extends Component {
   }
 
 
-
   render() {
     return (
       <div className="App">
@@ -28,7 +27,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+        <Reservations reservations={this.state.reservations}/> 
         </div>
       </div>
     )
