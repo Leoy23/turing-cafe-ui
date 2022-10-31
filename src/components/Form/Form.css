@@ -1,0 +1,12 @@
+form {
+    margin: auto;
+}
+
+input, 
+.make-reservation {
+    margin: 3px;
+    width: 20%;
+    border: 2px solid teal;
+    font-size: 15px;
+
+}

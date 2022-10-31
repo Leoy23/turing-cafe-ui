@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 class Form extends Component {
     constructor() {
@@ -15,14 +16,14 @@ class Form extends Component {
         this.setState({[event.target.name]: event.target.value})
     }
 
-    // submitReservation = (event) => {
-    //     event.preventDefault();
-    //     const newResy = {
-    //         id: Date.now();
-    //         ...this.state
-    //     }
-
-    // }
+    submitReservation = (event) => {
+        event.preventDefault();
+        const newResy = {
+            id: Date.now(),
+            ...this.state
+        }
+        this.props.addNewReservation(newResy)
+    }
 
     clearInputs() {
         this.setState({
@@ -59,12 +60,12 @@ class Form extends Component {
                 />
                    <input
                     type='number'
-                    placeholder='Number Of Guests'
+                    placeholder='# of guests'
                     name='guests'
                     value={this.state.guests}
                     onChange={event => this.handleChange(event)}
                 />
-                <button onClick={(event) => this.submitReservation(event)}></button>
+                <button className="make-reservation" onClick={(event) => this.submitReservation(event)}>Make Reservation</button>
             </form>
         )
     }
