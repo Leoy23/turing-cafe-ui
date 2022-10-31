@@ -11,13 +11,15 @@ class App extends Component {
     }
   }
 
-  component() {
+  componentDidMount() {
      return fetch('http://localhost:3001/api/v1/reservations')
       .then(response => response.json())
-      .then(data => this.setState({reservations: data}))
+      .then(data => {
+        console.log({data})
+        this.setState({reservations: data})
+      })
       .catch(error => this.setState({error: error}))
   }
-
 
   render() {
     return (
