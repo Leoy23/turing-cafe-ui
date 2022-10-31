@@ -2,7 +2,7 @@ import React from 'react'
 import ReservationCards from './../ReservationCards/ReservationCards'
 import './Reservations.css'
 
-const Reservations = ({reservations}) => {
+const Reservations = ({ reservations }) => {
     const allResys = reservations.map(resy => {
         return (
             <ReservationCards 
