@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Reservations from './../components/Reservations/Reservations'
+import Form from './../components/Form/Form'
 import './App.css';
 
 class App extends Component {
@@ -21,12 +22,16 @@ class App extends Component {
       .catch(error => this.setState({error: error}))
   }
 
+  addNewReservation = (newResy) => {
+    this.setState({reservations: [...this.state.reservations, newResy]})
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
+        <Form addNewReservation={this.addNewReservation}/>
         </div>
         <div className='resy-container'>
         <Reservations reservations={this.state.reservations}/> 
