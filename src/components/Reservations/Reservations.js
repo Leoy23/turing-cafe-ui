@@ -3,6 +3,7 @@ import ReservationCards from './../ReservationCards/ReservationCards'
 import './Reservations.css'
 
 const Reservations = ({ reservations }) => {
+    console.log(reservations)
     const allResys = reservations.map(resy => {
         return (
             <ReservationCards 

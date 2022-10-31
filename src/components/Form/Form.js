@@ -45,21 +45,21 @@ class Form extends Component {
                     onChange={event => this.handleChange(event)}
                 />
                    <input
-                    type='date'
+                    type='text'
                     placeholder='Date'
                     name='date'
                     value={this.state.date}
                     onChange={event => this.handleChange(event)}
                 />
                    <input
-                    type='time'
+                    type='text'
                     placeholder='Time'
                     name='time'
                     value={this.state.time}
                     onChange={event => this.handleChange(event)}
                 />
                    <input
-                    type='number'
+                    type='text'
                     placeholder='# of guests'
                     name='guests'
                     value={this.state.guests}
