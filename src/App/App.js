@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Reservations from './../components/Reservations/Reservations'
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,12 @@ class App extends Component {
     }
   }
 
+  component() {
+     return fetch('http://localhost:3001/api/v1/reservations')
+      .then(response => response.json())
+      .then(data => this.setState({reservations: data}))
+      .catch(error => this.setState({error: error}))
+  }
 
 
 
